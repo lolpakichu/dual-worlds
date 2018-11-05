@@ -33,7 +33,13 @@ public class PlayerController : MonoBehaviour {
     void FixedUpdate()
     {
         movementInput = Input.GetAxis("Horizontal");
-
         rb.velocity = new Vector2(movementInput * MovementSpeed, rb.velocity.y);
+
+        if(movementInput > 0){
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        } else if(movementInput < 0){
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+        
     }
 }
