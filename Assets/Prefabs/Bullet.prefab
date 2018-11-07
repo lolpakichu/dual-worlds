@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 200
-  lifeTime: 1.5
+  lifeTime: 1
 --- !u!212 &212274997529046978
 SpriteRenderer:
   m_ObjectHideFlags: 1

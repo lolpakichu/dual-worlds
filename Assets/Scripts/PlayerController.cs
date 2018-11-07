@@ -14,9 +14,12 @@ public class PlayerController : MonoBehaviour {
     public float checkRadius;
     public LayerMask WhatIsGround;
 
+    private SpriteRenderer gunSprite;
+    public GameObject gun;
+
 	// Use this for initialization
 	void Start () {
-		
+        gunSprite = gun.GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
@@ -37,8 +40,10 @@ public class PlayerController : MonoBehaviour {
 
         if(movementInput > 0){
             transform.eulerAngles = new Vector3(0, 0, 0);
+            gunSprite.flipX = false;
         } else if(movementInput < 0){
             transform.eulerAngles = new Vector3(0, 180, 0);
+            gunSprite.flipX = true;
         }
         
     }
