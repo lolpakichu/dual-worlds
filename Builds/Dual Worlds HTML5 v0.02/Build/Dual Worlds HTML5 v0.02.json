@@ -1,0 +1,13 @@
+{
+"companyName": "DefaultCompany",
+"productName": "GO2018Game",
+"dataUrl": "Dual Worlds HTML5 v0.02.data.unityweb",
+"wasmCodeUrl": "Dual Worlds HTML5 v0.02.wasm.code.unityweb",
+"wasmFrameworkUrl": "Dual Worlds HTML5 v0.02.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"}
+}

@@ -12,7 +12,7 @@ public class EnemyFollow : MonoBehaviour {
 
     public Transform groundDetection;
     public GameObject levelCompleteText;
-
+    public DeathZone deathZone;
 	// Use this for initialization
 	void Start () {
         isLevelComplete = false;
@@ -39,6 +39,7 @@ public class EnemyFollow : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player")){
+            deathZone.isLevelFailed = true;
             Destroy(collision.gameObject);
         }
         if(collision.CompareTag("Bullet")){

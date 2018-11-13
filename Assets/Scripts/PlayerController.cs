@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour {
         if(enemyFollow.isLevelComplete){
             MovementSpeed = 0f;
         } else {
-            MovementSpeed = 7f;
+            MovementSpeed = 7f; 
         }
 
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, WhatIsGround);

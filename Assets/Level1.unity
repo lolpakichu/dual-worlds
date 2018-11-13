@@ -251,6 +251,7 @@ MonoBehaviour:
   groundDetection: {fileID: 1638341320}
   levelCompleteText: {fileID: 1713195387455862, guid: 589bb1cdc1d3d4bc88b864b01ca3a3ae,
     type: 2}
+  deathZone: {fileID: 2103466167}
 --- !u!1 &79194302
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,7 +353,7 @@ MonoBehaviour:
     m_Bits: 256
   enemy: {fileID: 51742137}
   gun: {fileID: 665758393}
-  enemyFollow: {fileID: 0}
+  enemyFollow: {fileID: 51742142}
 --- !u!61 &79194307
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1285,3 +1286,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelFailed: {fileID: 1164788708455798, guid: c780837c97a3540c6bffbcc61a97d553,
     type: 2}
+  isLevelFailed: 0
