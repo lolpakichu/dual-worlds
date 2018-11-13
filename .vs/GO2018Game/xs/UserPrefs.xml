@@ -5,7 +5,7 @@
       <File FileName="Assets/Scripts/PlayerController.cs" Line="43" Column="28" />
       <File FileName="Assets/Scripts/EnemyFollow.cs" Line="38" Column="43" />
       <File FileName="Assets/Scripts/WeaponRotate.cs" Line="27" Column="44" />
-      <File FileName="Assets/Scripts/Projectile.cs" Line="32" Column="5" />
+      <File FileName="Assets/Scripts/Projectile.cs" Line="27" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

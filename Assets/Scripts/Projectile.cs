@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour {
 
+    public bool isLevelComplete = false;
     public float projectileSpeed;
     public float lifeTime;
 
@@ -24,8 +25,7 @@ public class Projectile : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Enemy")){
-            Destroy(collision.gameObject);
+        if(collision.CompareTag("Enviroment")){
             Destroy(gameObject);
         }
     }

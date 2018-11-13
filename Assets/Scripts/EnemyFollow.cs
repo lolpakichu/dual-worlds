@@ -6,13 +6,16 @@ public class EnemyFollow : MonoBehaviour {
 
     public float speed;
 
+    private bool isLevelComplete;
+
     private bool movingRight = true;
 
     public Transform groundDetection;
+    public GameObject levelCompleteText;
 
 	// Use this for initialization
 	void Start () {
-		
+        isLevelComplete = false;
 	}
 	
 	// Update is called once per frame
@@ -31,11 +34,20 @@ public class EnemyFollow : MonoBehaviour {
             }
 
         }
+
 	}
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player")){
             Destroy(collision.gameObject);
+        }
+        if(collision.CompareTag("Bullet")){
+
+            isLevelComplete = true;
+            Instantiate(levelCompleteText, Vector2.zero, Quaternion.identity);
+            Debug.Log("Level Complete");
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
         }
     }
 }
