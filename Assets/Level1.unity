@@ -247,6 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  isLevelComplete: 0
   groundDetection: {fileID: 1638341320}
   levelCompleteText: {fileID: 1713195387455862, guid: 589bb1cdc1d3d4bc88b864b01ca3a3ae,
     type: 2}
@@ -349,7 +350,9 @@ MonoBehaviour:
   WhatIsGround:
     serializedVersion: 2
     m_Bits: 256
+  enemy: {fileID: 51742137}
   gun: {fileID: 665758393}
+  enemyFollow: {fileID: 0}
 --- !u!61 &79194307
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1176,6 +1179,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2103466165}
   - component: {fileID: 2103466164}
+  - component: {fileID: 2103466166}
+  - component: {fileID: 2103466167}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -1242,3 +1247,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!61 &2103466166
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2103466163}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 14.660324, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 30.24, y: 40.319996}
+    newSize: {x: 30.24, y: 40.319996}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9193506, y: 40.319996}
+  m_EdgeRadius: 0
+--- !u!114 &2103466167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2103466163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79e9285d050c340a69df7aa7c10843e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelFailed: {fileID: 1164788708455798, guid: c780837c97a3540c6bffbcc61a97d553,
+    type: 2}

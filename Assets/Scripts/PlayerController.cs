@@ -13,17 +13,26 @@ public class PlayerController : MonoBehaviour {
     public Transform feetPos;
     public float checkRadius;
     public LayerMask WhatIsGround;
+    public GameObject enemy;
 
     private SpriteRenderer gunSprite;
     public GameObject gun;
+    public EnemyFollow enemyFollow;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
+        enemyFollow = enemy.GetComponent<EnemyFollow>();
         gunSprite = gun.GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+    
+        if(enemyFollow.isLevelComplete){
+            MovementSpeed = 0f;
+        } else {
+            MovementSpeed = 7f;
+        }
 
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, WhatIsGround);
 
@@ -47,4 +56,5 @@ public class PlayerController : MonoBehaviour {
         }
         
     }
+   
 }

@@ -6,7 +6,7 @@ public class EnemyFollow : MonoBehaviour {
 
     public float speed;
 
-    private bool isLevelComplete;
+    public bool isLevelComplete;
 
     private bool movingRight = true;
 
