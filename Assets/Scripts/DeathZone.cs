@@ -11,6 +11,7 @@ public class DeathZone : MonoBehaviour {
     {
         if(isLevelFailed){
             Instantiate(levelFailed, Vector2.zero, Quaternion.identity);
+            isLevelFailed = false;
         }
     }
 
