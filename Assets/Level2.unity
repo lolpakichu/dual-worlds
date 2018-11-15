@@ -1218,7 +1218,7 @@ GameObject:
   - component: {fileID: 2103466167}
   m_Layer: 0
   m_Name: Background
-  m_TagString: Untagged
+  m_TagString: DeathZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1318,6 +1318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79e9285d050c340a69df7aa7c10843e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelFailed: {fileID: 1457463988470654, guid: 02a2e9dfd308d430a8611ca1bf3c79a8,
+  levelFailed: {fileID: 1164788708455798, guid: c780837c97a3540c6bffbcc61a97d553,
     type: 2}
   isLevelFailed: 0
