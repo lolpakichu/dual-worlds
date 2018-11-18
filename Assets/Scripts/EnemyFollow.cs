@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyFollow : MonoBehaviour {
 
     public float speed;
 
-    public bool isLevelComplete;
+    public EnemyManager enemyManager;
 
     private bool movingRight = true;
 
@@ -15,11 +16,12 @@ public class EnemyFollow : MonoBehaviour {
     public DeathZone deathZone;
 	// Use this for initialization
 	void Start () {
-        isLevelComplete = false;
+        enemyManager.enemiesLeft = SceneManager.GetActiveScene().buildIndex;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
         transform.Translate(Vector2.right * speed * Time.deltaTime);
 
         RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, 2f);
@@ -35,6 +37,7 @@ public class EnemyFollow : MonoBehaviour {
 
         }
 
+
 	}
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -44,11 +47,10 @@ public class EnemyFollow : MonoBehaviour {
         }
         if(collision.CompareTag("Bullet")){
 
-            isLevelComplete = true;
-            Instantiate(levelCompleteText, Vector2.zero, Quaternion.identity);
-            Debug.Log("Level Complete");
+            enemyManager.enemiesLeft -= 1;
             Destroy(collision.gameObject);
             Destroy(gameObject);
+
         }
     }
 }

@@ -17,18 +17,18 @@ public class PlayerController : MonoBehaviour {
 
     private SpriteRenderer gunSprite;
     public GameObject gun;
-    public EnemyFollow enemyFollow;
+    public EnemyManager EnemyManager;
+
 
     // Use this for initialization
     void Start () {
-        enemyFollow = enemy.GetComponent<EnemyFollow>();
         gunSprite = gun.GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
     
-        if(enemyFollow.isLevelComplete){
+        if(EnemyManager.isLevelComplete){
             MovementSpeed = 0f;
         } else {
             MovementSpeed = 7f; 
